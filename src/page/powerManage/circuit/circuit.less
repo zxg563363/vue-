@@ -1,0 +1,76 @@
+.circuit{
+  .list{
+    margin-top: 20px;
+    .title{
+      margin-bottom:20px;
+      .el-button{
+        background: #1C89E8;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        width: 100px;
+      }
+    }
+    .content{
+      .el-table{
+        border-radius: 5px;
+      }
+      /deep/.el-table th,/deep/.el-table td{
+        text-align: center;
+      }
+    }
+  }
+  .modalAdd{
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius:10px;
+    .title{
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      font-size: 16px;
+      padding: 15px;
+      border-bottom:1px solid #f5f5f5;
+      &>div:first-child{
+        width: 5px;
+        height: 22px;
+        background: #00CD00;
+        margin-right: 10px;
+      }
+    }
+    .content{
+      padding:0 20px 20px;
+       &>div{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         margin:20px 0 ;
+         &>div{
+           width: 100px;
+         }
+         .el-input{
+           width: 30%;
+         }
+         textarea{
+           width: 30%;
+           height: 70px;
+         }
+         .el-select{
+           width: 30%;
+         }
+         .el-tree{
+           border: 1px solid #ECECEC;
+           height: 100px;
+           width: 30%;
+           overflow-y: scroll;
+         }
+       }
+    }
+    .footer{
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #f5f5f5;
+    }
+  }
+}

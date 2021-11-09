@@ -1,0 +1,101 @@
+.inventory{
+	.paging{
+		// width: ;
+		display: flex;
+		justify-content: center;
+	}
+	.content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+		&>div:first-child{
+      margin-bottom:20px;
+			.el-button{
+          width: 100px;
+          background: #13CE66;
+          color: #fff;
+          border-radius: 5px;
+          border: none;
+          margin-right: 10px;
+			}
+      .el-input{
+        width: 200px;
+      }
+		}
+		.modal-mask{
+		  width: calc(100% - 200px);
+		  height:calc(100% - 60px);
+		  background:rgba(0,0,0,0.5) ;
+		  z-index: 99;
+		  position: absolute;
+		  top: 60px;
+		  left: 200px;
+		}
+		.modal{
+		  width: 600px;
+		  height: calc(100% - 60px);
+		  background: #fff;
+		  z-index: 999;
+		  position: absolute;
+		  top: 60px;
+		  right:0;
+		  border-radius:10px 0 0 10px;
+		  .modal-header{
+		    padding: 10px 20px;
+		    background: #f5f5f5;
+		    border-radius: 10px 0 0 0;
+		    font-size: 16px;
+		    font-weight: 600;
+		    span{
+		      cursor: pointer;
+		    }
+		  }
+		  .modal-main{
+		    padding: 40px;
+		    div{
+		      margin-bottom:10px;
+		      span{
+		        display: inline-block;
+		        width: 150px;
+		      }
+		      .el-input{
+		        width: 350px;
+		        margin-left: 5px;
+            vertical-align:middle;
+		      }
+          .el-tree{
+            border-radius: 4px;
+            border: 1px solid #DCDFE6;
+            width: 350px;
+            display: inline-block;
+            vertical-align:middle;
+          }
+		      textarea{
+		        width: 350px;
+		        height: 200px;
+		        vertical-align:middle;
+		        border:1px solid #DCDFE6!important;
+		        outline:none;
+		        resize:none;
+		      }
+		    }
+
+		  }
+		  .modal-footer{
+		    box-sizing: border-box;
+		    padding: 10px;
+		    text-align: center;
+		    width: 100%;
+		    border-top: 1px solid #f5f5f5;
+		    position: absolute;
+		    bottom: 0;
+		    right: 0;
+		  }
+		}
+	}
+  .f{
+    float: right;
+  }
+  /deep/ .el-table td,/deep/ .el-table th{
+			text-align: center;
+		}
+}

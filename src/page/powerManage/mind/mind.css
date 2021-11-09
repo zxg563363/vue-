@@ -1,0 +1,109 @@
+.mind .list {
+  margin-top: 20px;
+}
+.mind .list .title {
+  margin-bottom: 20px;
+}
+.mind .list .title .el-button {
+  background: #1C89E8;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  width: 150px;
+}
+.mind .list .content .el-table {
+  border-radius: 5px;
+  height: 334px;
+}
+.mind .list .content /deep/ .el-table th,
+.mind .list .content /deep/ .el-table td {
+  text-align: center;
+}
+.mind .list .content .paging {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.mind .modalAdd {
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.mind .modalAdd .title {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  font-size: 16px;
+  padding: 10px 15px ;
+  color: #1C89E8;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.mind .modalAdd .title > div:first-child {
+  width: 5px;
+  height: 26px;
+  background: #00CD00;
+  margin-right: 10px;
+}
+.mind .modalAdd .title > div:nth-child(3) {
+  margin-left: auto;
+}
+.mind .modalAdd .title > div:nth-child(3) .el-button {
+  height: 30px;
+  padding: 5px;
+}
+.mind .modalAdd .content {
+  text-align: center;
+}
+.mind .modalAdd .content > div {
+  margin: 10px 0;
+}
+.mind .modalAdd .content /deep/ .el-textarea {
+  width: 800px;
+  vertical-align: top;
+}
+.mind .modalAdd .content span {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+.mind .modalAdd .content /deep/ .el-input {
+  padding-bottom: 10px;
+  width: 800px;
+  height: 39px;
+  vertical-align: middle;
+}
+.mind .modalAdd .content .el-select {
+  width: 800px;
+  vertical-align: middle;
+}
+.mind .modalAdd .content /deep/ .el-form {
+  display: inline-block;
+  vertical-align: middle;
+}
+.mind .modalAdd .content .el-tree {
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.mind .modalAdd .content .objectTree {
+  position: absolute;
+  overflow: auto;
+  height: 200px;
+  border: 1px solid #ddd;
+  line-height: normal;
+  z-index: 204;
+}
+.mind .modalAdd .content .width-220 {
+  width: 800px;
+}
+.mind .modalAdd .detail {
+  padding: 10px 20px;
+}
+.mind .modalAdd .detail > div {
+  height: 40px;
+}
+.mind /deep/ .el-table__body tr.current-row > td {
+  background-color: #E7F6F5 !important;
+}

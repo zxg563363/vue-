@@ -1,0 +1,54 @@
+.station{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+    .content{
+        margin-top: 20px;
+        background: #fff;
+        padding: 20px;
+    }
+  .addUserTree{
+    max-height: 360px;
+    overflow-y: auto;
+  }
+  .stationMenuTree{
+    max-height: 600px;
+    overflow-y: auto;
+  }
+    .empty{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  #choose-user-list {
+    padding: 0 0 12px 0;
+    max-height: 355px;
+    overflow-y: auto;
+    .el-tag--small {
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+#role-tree .el-tree .el-tree-node__content{
+  font-size: 13px;
+}
+
+.tree-extends-op{
+  display: none;
+  padding-left: 10px;
+}
+
+.el-tree-node__content:hover .custom-tree-node .tree-extends-op{
+  display: inline-block;
+}
+
+
+.el-form--label-top .el-form-item__label{
+  font-weight: 600;
+}
+
+.el-tree-node.is-current>.el-tree-node__content>.custom-tree-node>.tree-extends-op{
+  display: inline-block;
+}
+
+

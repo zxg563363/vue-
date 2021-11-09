@@ -1,0 +1,325 @@
+<el-row :gutter="12" class="real-time-form">
+  <el-col :span="24">
+    <el-row>
+      <el-col :span="24">
+        <el-card class="box-card">
+          <Collector :collector-id="collectorId"></Collector>
+        </el-card>
+      </el-col>
+      <el-col :span="24" style="margin-top: 12px;">
+        <el-row :gutter="12">
+          <el-col :span="8">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.f"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    <ICountUp
+                      :delay="delay"
+                      :endVal="modelData.f"
+                      :options="options"/>
+                  </h4>
+                  <h6>设备频率 (Hz)</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+          <el-col :span="8">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.P"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    <ICountUp
+                      :delay="delay"
+                      :endVal="modelData.P"
+                      :options="options"/>
+                  </h4>
+                  <h6>设备功率 (kW)</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+          <el-col :span="8">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.Q"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    <ICountUp
+                      :delay="delay"
+                      :endVal="modelData.Q"
+                      :options="options"/>
+                  </h4>
+                  <h6>功率因数 (kW)</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
+      </el-col>
+
+    </el-row>
+  </el-col>
+
+  <el-col :span="24">
+    <el-card class="box-card" style="margin-top: 12px;">
+      <div slot="header" class="clearfix">
+        <b>相电压（kV）</b>
+      </div>
+      <el-row>
+        <el-col :span="5">
+          <el-row>
+            <el-col :span="12">
+              <el-row>
+                <el-col :span="24" style="margin-top: 30px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-40 f-digital text-danger">
+                        {{modelData.Ua}}
+                      </h4>
+                      <h6 class="f-s-13">A相(Ua)</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 30px; margin-bottom: 30px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-40 f-digital text-danger">
+                        {{modelData.Ub}}
+                      </h4>
+                      <h6 class="f-s-13">B相(Ub)</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-40 f-digital text-danger">
+                        {{modelData.Uc}}
+                      </h4>
+                      <h6 class="f-s-13">C相(Uc)</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <!--Max-->
+            <el-col :span="6">
+              <el-row>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseData.max[0]}}
+                      </h4>
+                      <h6 class="f-s-13">Max</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 48px; margin-bottom: 48px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseData.max[1]}}
+                      </h4>
+                      <h6 class="f-s-13">Max</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseData.max[2]}}
+                      </h4>
+                      <h6 class="f-s-13">Max</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+
+            </el-col>
+            <el-col :span="6">
+              <el-row>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseData.min[0]}}
+                      </h4>
+                      <h6 class="f-s-13">Min</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 48px; margin-bottom: 48px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseData.min[1]}}
+                      </h4>
+                      <h6 class="f-s-13">Min</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseData.min[2]}}
+                      </h4>
+                      <h6 class="f-s-13">Min</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+          </el-row>
+        </el-col>
+        <el-col :span="19" style="border-left: 1px solid #ebeef5;">
+          <RealTimeLineCharts :data.sync="chartsData"
+                              :increase-data.sync="increaseData"
+                              v-loading="dataLoading"></RealTimeLineCharts>
+        </el-col>
+      </el-row>
+    </el-card>
+  </el-col>
+
+  <el-col :span="24">
+    <el-card class="box-card" style="margin-top: 12px;">
+      <div slot="header" class="clearfix">
+        <b>相电流（A）</b>
+      </div>
+      <el-row>
+        <el-col :span="5">
+          <el-row>
+            <el-col :span="12">
+              <el-row>
+                <el-col :span="24" style="margin-top: 30px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-40 f-digital text-primary">
+                        {{modelData.Ia}}
+                      </h4>
+                      <h6 class="f-s-13">A相(Ia)</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 30px; margin-bottom: 30px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-40 f-digital text-primary">
+                        {{modelData.Ib}}
+                      </h4>
+                      <h6 class="f-s-13">B相(Ib)</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-40 f-digital text-primary">
+                        {{modelData.Ic}}
+                      </h4>
+                      <h6 class="f-s-13">C相(Ic)</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :span="6">
+              <el-row>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseCurrentData.max[0]}}
+                      </h4>
+                      <h6 class="f-s-13">Max</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 48px; margin-bottom: 48px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseCurrentData.max[1]}}
+                      </h4>
+                      <h6 class="f-s-13">Max</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseCurrentData.max[2]}}
+                      </h4>
+                      <h6 class="f-s-13">Max</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :span="6">
+              <el-row>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseCurrentData.min[0]}}
+                      </h4>
+                      <h6 class="f-s-13">Min</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 48px; margin-bottom: 48px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseCurrentData.min[1]}}
+                      </h4>
+                      <h6 class="f-s-13">Min</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-22 f-digital text-grey">
+                        {{increaseCurrentData.min[2]}}
+                      </h4>
+                      <h6 class="f-s-13">Min</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+          </el-row>
+
+        </el-col>
+        <el-col :span="19" style="border-left: 1px solid #ebeef5;">
+          <RealTimeLineCharts :data.sync="chartsCurrentData"
+                              :increase-data.sync="increaseCurrentData"
+                              v-loading="dataLoading"></RealTimeLineCharts>
+        </el-col>
+      </el-row>
+    </el-card>
+  </el-col>
+</el-row>
+

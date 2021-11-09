@@ -1,0 +1,45 @@
+.electric{
+  .content{
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    .left_content{
+        margin-right: 20px;
+        background: #eee;
+        padding: 20px;
+        border-radius: 10px;
+        .treeTop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 34px;
+            border-bottom: 1px solid #bbb;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            .treeTitle{
+                font-size: 16px;
+                font-weight: bold;
+                color: #1C89E8;
+            }
+        }
+    }
+    .right_content{
+      .title{
+          width: 100%;
+          background: #0066CC;
+          color: #fff;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 4px;
+          padding-left: 40px;
+          line-height: 40px;
+          color: #fff;
+        }
+    }
+  }
+  /deep/.el-tree{
+    background: #eee;
+  }
+}

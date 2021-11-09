@@ -1,0 +1,90 @@
+#query-area{
+  /deep/ .el-form-item--small.el-form-item{
+    margin-bottom: 0;
+  }
+}
+
+.add-equipment{
+  /*margin-top: 10px;*/
+  cursor: pointer;
+  height:140px ;
+  width: 140px;
+  background: #e4e7ed;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#909399;
+  &>div:first-child{
+    font-size: 40px;
+  }
+  &:hover{
+    background:rgba(232,243,253);
+    color:#1167fa;
+  }
+
+}
+.expand-content{
+  .el-card{
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .el-card .el-card__body h4{
+    line-height: 24px;
+    font-size: 13px;
+    .eq-value{
+      font-weight: 600;
+    }
+  }
+  .el-card .el-card__body h3{
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 600;
+
+  }
+  .el-card .el-card__body{
+    padding: 12px;
+  }
+  .eq-vertical{
+    height: 120px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .op-remove{
+    display: none;
+    position: absolute;
+    right: 0;
+    top:-6px;
+  }
+  .el-card:hover .op-remove{
+    display: block;
+  }
+
+  /deep/.el-table__expanded-cell[class*=cell]{
+    padding: 12px;
+  }
+
+  .el-divider--horizontal{
+    margin: 10px 0;
+    background-color: #ebeef5;
+  }
+  /deep/ .el-form-item__label{
+    font-size: 13px;
+    //font-weight: 600;
+  }
+  /deep/ .el-form-item__content{
+    font-size: 13px;
+    font-weight: 600;
+  }
+  /deep/ .el-form-item--mini.el-form-item{
+    margin-bottom: 10px;
+  }
+}
+
+

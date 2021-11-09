@@ -1,0 +1,66 @@
+#task-kanban{
+
+  .card-item{
+    background:linear-gradient(to bottom,#FFA083,#FF7045);
+    color: #FFFFFF;
+    border-radius: 10px;
+    .card-header{
+      font-size: 14px;
+      font-weight: bold;
+    }
+    /deep/.el-card__header{
+      border-bottom: 1px solid rgba(245,245,245,0.2);
+    }
+
+    .task-num{
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center;
+      h2{
+        font-size: 32px;
+        font-weight: bold;
+      }
+      h3{
+        font-size: 13px;
+        line-height: 66px;
+      }
+      .text-tips{
+        //flex: 1;
+        width: 130px;
+        height: 38px;
+        line-height: 38px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 8px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .text-tips:nth-last-child(1){
+        margin-left: 30px;
+      }
+    }
+  }
+  #xunjian{
+    background:linear-gradient(to bottom,#FFA083,#FF7045);
+  }
+  #dianjian{
+    background:linear-gradient(to bottom,#6FB7FC,#087FF2);
+  }
+  #baoyang{
+    background:linear-gradient(to bottom,#67EE6E,#16CC1F);
+  }
+
+  .el-form-item--mini.el-form-item{
+    margin-bottom: 0;
+  }
+
+  /deep/ .el-date-editor--daterange.el-input, .el-date-editor--daterange.el-input__inner, /deep/ .el-date-editor--timerange.el-input, .el-date-editor--timerange.el-input__inner{
+    width: 240px;
+  }
+
+  /deep/ .el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner, /deep/ .el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner{
+    width: 330px;
+  }
+}

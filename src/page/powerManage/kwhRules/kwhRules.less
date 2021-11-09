@@ -1,0 +1,106 @@
+.kwhRules{
+  .list{
+    margin-top: 20px;
+    .title{
+      margin-bottom:20px;
+      .el-button{
+        background: #13CE66;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        width: 150px;
+      }
+    }
+    .content{
+      .el-table{
+        border-radius: 5px;
+      }
+      /deep/.el-table th,/deep/.el-table td{
+        text-align: center;
+      }
+    }
+  }
+  .modalAdd{
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius:10px;
+    .title{
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      font-size: 16px;
+      padding: 15px;
+      border-bottom:1px solid #f5f5f5;
+      &>div:first-child{
+        width: 5px;
+        height: 22px;
+        background: #00CD00;
+        margin-right: 10px;
+      }
+    }
+    .content{
+      padding:0 20px 20px;
+      .showDoing>div:nth-child(2){
+        background:#f5f5f5;
+        padding:15px;
+        border-radius:5px;
+      }
+       &>div{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         margin:25px 0;
+         &>div:first-child{
+           width: 150px;
+         }
+         .el-input{
+           width: 50%;
+         }
+         .el-select{
+           width: 50%;
+         }
+         textarea{
+           width: 50%;
+           height: 70px;
+         }
+         .el-radio{
+           width: 150px;
+         }
+
+         .add{
+           font-size: 80px;
+           font-weight: 600;
+           color: #C0CCDA;
+           margin-left: 20px;
+         }
+          .single{
+
+           /deep/.el-input{
+             width: 100px;
+             margin: 0 10px;
+           }
+            /deep/.el-select{
+             width: 100px;
+             margin: 0 10px;
+           }
+           &>div{
+             background:#f5f5f5;
+             padding:15px;
+             border-radius:5px;
+             margin: 15px 0;
+           }
+         }
+       }
+    }
+    .footer{
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #f5f5f5;
+    }
+
+  }
+  .f{
+    float: right;
+  }
+}

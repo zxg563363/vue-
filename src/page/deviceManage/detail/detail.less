@@ -1,0 +1,103 @@
+.detail{
+  flex-direction: row;
+  display:flex;
+  padding:10px;
+  .title{
+    padding: 40px 30px 30px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0F65FA;
+  }
+  .leftmain{
+    padding-bottom:50px ;
+	  width: 30%;
+    box-sizing: border-box;
+	  background: #FFFFFF;
+	  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.06);
+	  border-radius: 6px;
+    margin-right:16px ;
+    .content{
+      text-align:center;
+      &>div{
+        flex-direction: row;
+        display:flex;
+        line-height: 38px;
+        font-size: 16px;
+        &>div:first-child{
+          text-align: right;
+          min-width: 150px;
+          color: #7E8299;
+          font-weight: 400;
+        }
+        &>div:nth-child(2){
+          color: #000;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .rightmain{
+    width: 70%;
+    box-sizing: border-box;
+	  .spare{
+      height: 460px;
+      overflow-y: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.06);
+      border-radius: 6px;
+      padding: 0 20px 20px 20px;
+	  }
+	  .record{
+      position: position;
+      margin-top:16px ;
+		  height: 460px;
+		  background: #FFFFFF;
+		  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.06);
+		  border-radius: 6px;
+      padding:20px;
+      .header{
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: row;
+        &>div{
+          width: 106px;
+          height: 36px;
+          border-radius: 4px;
+          text-align: center;
+          line-height: 36px;
+          color: #333333;
+          margin-right: 20px;
+        }
+      }
+	  }
+  }
+  /deep/.el-table th,/deep/.el-table td{
+    text-align: center;
+  }
+  /deep/.el-table th{
+    background:#F4F8FF;
+    border-bottom: 0px;
+    height: 50px;
+  }
+  /deep/.el-table td{
+    height: 70px;
+    font-size: 16px;
+    color: #121212;
+  }
+  /deep/.el-pagination{
+    position: absolute;
+    bottom: -300px;
+    right: 300px;
+
+  }
+  .active{
+    background: #0F65FA;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF!important;
+  }
+  // /deep/.el-pagination__sizes{
+  //   float: right;
+  // }
+}

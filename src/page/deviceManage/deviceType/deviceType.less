@@ -1,0 +1,53 @@
+.deviceList{
+  .content{
+    overflow: hidden;
+    // border-top: 1px solid #ccc;
+    // padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+  }
+}
+#makingform{
+  /deep/.el-aside{
+    background-color: unset !important;
+    width: 250px !important;
+  }
+  /deep/.widget-config-container{
+    width: 300px !important;
+  }
+}
+/deep/.el-table th,/deep/.el-table td{
+  text-align: center;
+}
+
+///deep/.el-button--text:nth-child(2){
+//  color: #e72926;
+//}
+
+#query-area .el-form-item--small.el-form-item{
+  margin-bottom: 0;
+}
+.tree-extends-op{
+  display: none;
+  padding-left: 10px;
+}
+
+.el-tree-node__content:hover .custom-tree-node .tree-extends-op{
+  display: inline-block;
+}
+
+.el-tree-node.is-current>.el-tree-node__content>.custom-tree-node>.tree-extends-op{
+  display: inline-block;
+}
+
+/deep/ .el-form-item--small .el-form-item__label{
+  font-size: 13px;
+  font-weight: 600;
+}
+/deep/ .el-divider__text.is-left{
+  font-weight: bold;
+  font-size: 16px;
+}

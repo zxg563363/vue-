@@ -1,0 +1,109 @@
+    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 704 530" style="enable-background:new 0 0 704 530;" xml:space="preserve">
+        <defs>
+            <style type="text/css">
+                .st0 {
+                    fill: none;
+                }
+                #items-svg{
+                    fill: #002461;
+                }
+                .st1 {
+                    isolation: isolate;
+                }
+            </style>
+            <filter id="Gaussian_Blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+            </filter>
+            <mask id="theClip">
+                <circle r="50" fill="#66cdff" id="clipCircle1" style="filter:url(#Gaussian_Blur);opacity:.7"></circle>
+            </mask>
+            <mask id="theClip2">
+                <circle r="44" fill="#66cdff" id="clipCircle2" style="filter:url(#Gaussian_Blur);opacity:.7"></circle>
+            </mask>
+            <mask id="theClip3">
+                <circle r="47" fill="#66cdff" id="clipCircle3" style="filter:url(#Gaussian_Blur);opacity:.7"></circle>
+            </mask>
+            <mask id="theClip4">
+                <circle r="64" fill="#66cdff" id="clipCircle4" style="filter:url(#Gaussian_Blur);opacity:.7"></circle>
+            </mask>
+            <mask id="theClip5">
+                <circle r="60" fill="#66cdff" id="clipCircle5" style="filter:url(#Gaussian_Blur);opacity:.7"></circle>
+            </mask>
+            <mask id="theClip6">
+                <circle r="55" fill="#66cdff" id="clipCircle6" style="filter:url(#Gaussian_Blur);opacity:.7"></circle>
+            </mask>
+        </defs>
+        <title>线</title>
+        <g>
+            <path id="path1" class="st0" d="M55.8,136.8h67.8c4.3,0,8.4-1.3,11.9-3.8l50.9-35.6c7.1-5,15.6-7.6,24.3-7.7H704" />
+            <path id="path2" class="st0" d="M0.2,203.9h195c9.9,0,17.9-8,17.9-17.9v-17.8c0-5.6,4.5-10.1,10.1-10.1h21.9h458.4" />
+            <path id="path3" class="st0" d="M8.6,260h152h31.9c0,0,5.8,0.5,5.8-5.8s0-6.3,0-6.3s0-3.9,4.5-3.9s24.6,0,24.6,0h475.1" />
+            <path id="path4" class="st0" d="M0.1,325.2h233c10.9,0,21.2,5.5,27.3,14.5l29.6,44.1c6.1,9.1,16.3,14.5,27.3,14.5h387" />
+            <path id="path5" class="st0" d="M704.5,316.7H369.2c-13.6,0-24.7,11.1-24.7,24.7l0,0v155.3c0,13.6-11.1,24.7-24.7,24.7H193.4
+		c-13.6,0-24.7-11.1-24.7-24.7l0,0V369.6H51.2" />
+            <path id="path6" class="st0" d="M-0.2,203.9h195c9.9,0,17.9-8,17.9-17.9v-17.8c0-5.6,4.5-10.1,10.1-10.1h21.9H255c10.8,0,19.5-8.7,19.5-19.5
+		V27.4c0-10.8,8.7-19.5,19.5-19.5h409.4" />
+        </g>
+        <g id="items-svg">
+            <g>
+                <path  id="cpath1" class="st1" d="M123.6,137.6H55.8V136h67.8c4.1,0,8.1-1.3,11.4-3.7l50.9-35.6c7.1-5,15.7-7.7,24.7-7.8H704v1.6H210.7
+			c-8.7,0.1-17,2.7-23.8,7.6L136,133.7C132.3,136.2,128.1,137.6,123.6,137.6z" />
+            </g>
+            <g>
+                <path id="cpath2" class="st1" d="M195.2,204.7H0.2v-1.6h195c9.4,0,17.1-7.7,17.1-17.1v-17.8c0-6,4.9-10.9,10.9-10.9h480.3v1.6H223.2
+			c-5.1,0-9.3,4.2-9.3,9.3V186C213.9,196.3,205.5,204.7,195.2,204.7z" />
+            </g>
+            <g>
+                <path id="cpath3" class="st1" d="M192.8,260.8c-0.2,0-0.3,0-0.4,0l-183.8,0v-1.6h183.9c0.1,0,2.2,0.2,3.6-1.2c0.9-0.8,1.4-2.1,1.4-3.8v-6.3
+			c0-1.6,1.1-4.7,5.3-4.7h499.7v1.6H202.8c-3.6,0-3.7,2.8-3.7,3.1v6.3c0,2.2-0.6,3.9-1.9,5C195.6,260.7,193.6,260.8,192.8,260.8z"
+                />
+            </g>
+            <g>
+                <path id="cpath4" class="st1" d="M704.3,399.1h-387c-11.3,0-21.7-5.6-28-14.9l-29.6-44.1c-6-8.9-16-14.1-26.6-14.1H0.1v-1.6h233
+			c11.2,0,21.7,5.6,28,14.9l29.6,44.1c5.9,8.9,15.9,14.1,26.6,14.1h387V399.1z" />
+            </g>
+            <g>
+                <path id="cpath5" class="st1 path5" d="M319.8,522.2H193.4c-14.1,0-25.5-11.4-25.5-25.5V370.4H51.2v-1.6h118.3v127.9c0,13.2,10.7,23.9,23.9,23.9
+			h126.4c13.2,0,23.9-10.7,23.9-23.9V341.4c0-14.1,11.4-25.5,25.5-25.5h335.3v1.6H369.2c-13.2,0-23.9,10.7-23.9,23.9v155.3
+			C345.3,510.8,333.9,522.2,319.8,522.2z" />
+            </g>
+            <g>
+                <path id="cpath6" class="st1" d="M194.8,204.7h-195v-1.6h195c9.4,0,17.1-7.7,17.1-17.1v-17.8c0-6,4.9-10.9,10.9-10.9H255
+			c10.3,0,18.7-8.4,18.7-18.7V27.4c0-11.2,9.1-20.3,20.3-20.3h409.4v1.6H294c-10.3,0-18.7,8.4-18.7,18.7v111.2
+			c0,11.2-9.1,20.3-20.3,20.3h-32.2c-5.1,0-9.3,4.2-9.3,9.3V186C213.5,196.3,205.1,204.7,194.8,204.7z" />
+            </g>
+        </g>
+
+        <animateMotion xlink:href="#clipCircle1" dur="2s" begin="0s" fill="freeze" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#path1" />
+        </animateMotion>
+        <use mask="url(#theClip)" xlink:href="#cpath1" fill="#66cdff" />
+
+        <animateMotion xlink:href="#clipCircle2" dur="3s" begin="1.5s" fill="freeze" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#path2" />
+        </animateMotion>
+        <use mask="url(#theClip2)" xlink:href="#cpath2" fill="#66cdff" />
+
+        <animateMotion xlink:href="#clipCircle3" dur="2.4s" begin="1s" fill="freeze" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#path3" />
+        </animateMotion>
+        <use mask="url(#theClip3)" xlink:href="#cpath3" fill="#66cdff" />
+
+        <animateMotion xlink:href="#clipCircle4" dur="2.2s" begin="3.2s" fill="freeze" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#path4" />
+        </animateMotion>
+        <use mask="url(#theClip4)" xlink:href="#cpath4" fill="#66cdff" />
+<!--
+        <animateMotion xlink:href="#clipCircle5"  dur="5s" begin="0s" fill="freeze" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#path5" />
+            <animateTransform></animateTransform>
+        </animateMotion>
+        <use mask="url(#theClip5)" xlink:href="#cpath5" fill="#66cdff" /> -->
+
+        <animateMotion xlink:href="#clipCircle6" dur="2s" begin="2s" fill="freeze" repeatCount="indefinite" rotate="auto-reverse">
+            <mpath xlink:href="#path6" />
+        </animateMotion>
+        <use mask="url(#theClip6)" xlink:href="#cpath6" fill="#66cdff" />
+
+    </svg>

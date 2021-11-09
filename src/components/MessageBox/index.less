@@ -1,0 +1,73 @@
+/deep/.el-dialog__title{
+  color: #1167FA;
+}
+.datetime{
+  font-size: 12px;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.3);
+  color: #FFFFFF;
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.notice-card{
+  margin-bottom: 20px;
+
+  /deep/ .el-form-item__label{
+    font-size: 13px;
+    font-weight: 600;
+  }
+  /deep/ .read {
+    .el-form-item__label{
+      font-size: 13px;
+      font-weight: unset;
+    }
+  }
+  /deep/ .el-form-item--small.el-form-item{
+    margin-bottom: 0px;
+  }
+  /deep/ .el-divider--horizontal{
+    margin: 12px 0;
+    background-color: #ebeef5;
+  }
+  /deep/ .el-card__header{
+    border-bottom: none;
+  }
+  [class*=" el-icon-"], [class^=el-icon-]{
+    font-weight: bold;
+    color: #c0c4cc;
+  }
+  /deep/ .el-image__inner{
+    vertical-align: middle;
+  }
+  /deep/ .el-form{
+    cursor: pointer;
+  }
+
+  /deep/ .el-card__body{
+    padding-top: 0;
+  }
+}
+
+.view-notice:hover{
+  cursor: pointer;
+}
+.message-box{
+  height: 530px;
+  overflow-y: auto;
+}
+/deep/ .el-backtop{
+  position: absolute;
+}
+.message-box{
+  /deep/ .el-badge__content.is-fixed{
+    right: 4px;
+  }
+}
+.message-box-dialog {
+  /deep/ .el-dialog__headerbtn .el-dialog__close:before {
+    font-size: 20px;
+  }
+}

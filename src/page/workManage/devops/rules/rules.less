@@ -1,0 +1,118 @@
+.addRules{
+  .addType{
+    background:#fff;
+    margin-top:12px;
+    border-radius:10px;
+    .title{
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      font-size: 16px;
+      padding: 10px 15px ;
+      color:#1C89E8;
+      font-weight: 600;
+      font-size: 18px;
+      border-bottom:1px solid #f5f5f5;
+      &>div:first-child{
+        width: 5px;
+        height: 26px;
+        background: #00CD00;
+        margin-right: 10px;
+      }
+      &>div:nth-child(3){
+        margin-left:auto;
+
+      }
+    }
+    .detail{
+      min-width:1000px;
+      div{
+        .header{
+          height: 40px;
+          background: #eee;
+          font-weight: 600;
+          line-height: 40px;
+          padding-left: 10px;
+        }
+        .content{
+          text-align:center;
+          .list_0{
+            border: 1px dashed #4082e6;
+          }
+          &>div{
+            margin: 10px 0;
+            &>div{
+              display: inline-block;
+              width: 70%;
+            }
+          }
+          span{
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+          }
+          /deep/.el-input{
+           padding-bottom: 10px;
+           width: 60%;
+           height: 39px;
+            vertical-align:middle;
+          }
+          .el-select{
+            width: 60%;
+             vertical-align:middle;
+          }
+          /deep/.el-form{
+            display: inline-block;
+            vertical-align:middle;
+            // width: 60%;
+          }
+          /deep/ .el-textarea{
+            width: 60%;
+            vertical-align:top;
+          }
+          .el-tree{
+            border-radius: 5px;
+            vertical-align:middle;
+          }
+          .objectTree {
+            // margin-left:px;
+            position: absolute;
+            overflow: auto;
+            height: 200px;
+            border: 1px solid #ddd;
+            line-height: normal;
+            z-index: 204;
+           }
+           .width-220{
+              width: 60%;
+            }
+        }
+      }
+    }
+  }
+  .content{
+    margin-top:12px;
+    .title{
+      padding: 10px;
+      background: #f5f5f5;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/deep/.el-table th,/deep/.el-table td{
+  text-align: center;
+}
+
+/deep/.el-button--text:nth-child(2){
+  color: #FF4D51;
+}
+/deep/ .el-select{
+  width: 100%;
+}
+/deep/ .el-button{
+      padding:10px;
+    }
+.f{
+  float: right;
+}

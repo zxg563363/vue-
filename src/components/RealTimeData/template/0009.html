@@ -1,0 +1,277 @@
+<el-row :gutter="12" class="real-time-form">
+  <el-col :span="24">
+    <el-row>
+      <el-col :span="24">
+        <el-card class="box-card">
+          <Collector :collector-id="collectorId"></Collector>
+        </el-card>
+      </el-col>
+      <el-col :span="24" style="margin-top: 12px;">
+        <el-row :gutter="12">
+          <el-col :span="6">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.pm25"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    {{modelData.pm25 || 0}}
+                  </h4>
+                  <h6><span style="font-weight: 600;">PM2.5</span> (μg/m3)</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+          <el-col :span="6">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.ll"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    {{modelData.ll || 0}}
+                  </h4>
+                  <h6><span style="font-weight: 600;">流量</span>（L/min）</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+          <el-col :span="6">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.dl"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    {{modelData.dl || 0}}
+                  </h4>
+                  <h6><span style="font-weight: 600;">电流</span>（A）</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+
+          <el-col :span="6">
+            <el-card class="box-card">
+              <div class="media">
+                <div class="media-left meida media-middle">
+                  <el-image
+                    style="width: 48px; height: 48px"
+                    :src="icon.wd"
+                    fit="fill"></el-image>
+                </div>
+                <div class="media-body media-text-right">
+                  <h4 class="f-s-40 f-digital text-grey">
+                    {{modelData.wd || 0}}
+                  </h4>
+                  <h6><span style="font-weight: 600;">温度</span>（℃）</h6>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
+      </el-col>
+      <el-col :span="24">
+        <el-card class="box-card" style="margin-top: 12px;">
+          <div slot="header" class="clearfix">
+            <b>PM2.5</b>
+          </div>
+          <el-row>
+            <el-col :span="3">
+              <el-row>
+                <el-col :span="24" style="margin-top: 24px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{modelData.pm25}}
+                      </h4>
+                      <h6 class="f-s-16">当前</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{increaseCurrentData.max[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最大</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-danger">
+                        {{increaseCurrentData.min[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最小</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :span="21" style="border-left: 1px solid #ebeef5;">
+              <RealTimeLineChartsV2 :data.sync="chartsCurrentData"
+                                  :increase-data.sync="increaseCurrentData"
+                                  v-loading="dataLoading"></RealTimeLineChartsV2>
+            </el-col>
+          </el-row>
+        </el-card>
+        <el-card class="box-card" style="margin-top: 12px;">
+          <div slot="header" class="clearfix">
+            <b>温度</b>
+          </div>
+          <el-row>
+            <el-col :span="3">
+              <el-row>
+                <el-col :span="24" style="margin-top: 24px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{modelData.wd}}
+                      </h4>
+                      <h6 class="f-s-16">当前</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{increaseCurrentData4.max[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最大</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-danger">
+                        {{increaseCurrentData4.min[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最小</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :span="21" style="border-left: 1px solid #ebeef5;">
+              <RealTimeLineChartsV2 :data.sync="chartsCurrentData4"
+                                    :increase-data.sync="increaseCurrentData4"
+                                    v-loading="dataLoading"></RealTimeLineChartsV2>
+            </el-col>
+          </el-row>
+        </el-card>
+
+        <el-card class="box-card" style="margin-top: 12px;">
+          <div slot="header" class="clearfix">
+            <b>流量</b>
+          </div>
+          <el-row>
+            <el-col :span="3">
+              <el-row>
+                <el-col :span="24" style="margin-top: 24px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{modelData.ll}}
+                      </h4>
+                      <h6 class="f-s-16">当前</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{increaseCurrentData2.max[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最大</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-danger">
+                        {{increaseCurrentData2.min[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最小</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :span="21" style="border-left: 1px solid #ebeef5;">
+              <RealTimeLineChartsV2 :data.sync="chartsCurrentData2"
+                                    :increase-data.sync="increaseCurrentData2"
+                                    v-loading="dataLoading"></RealTimeLineChartsV2>
+            </el-col>
+          </el-row>
+        </el-card>
+
+        <el-card class="box-card" style="margin-top: 12px;">
+          <div slot="header" class="clearfix">
+            <b>电流</b>
+          </div>
+          <el-row>
+            <el-col :span="3">
+              <el-row>
+                <el-col :span="24" style="margin-top: 24px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{modelData.dl}}
+                      </h4>
+                      <h6 class="f-s-16">当前</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-grey">
+                        {{increaseCurrentData3.max[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最大</h6>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="24" style="margin-top: 44px;">
+                  <div class="media">
+                    <div class="media-body media-text-center">
+                      <h4 class="f-s-32 f-digital text-danger">
+                        {{increaseCurrentData3.min[0]}}
+                      </h4>
+                      <h6 class="f-s-16">最小</h6>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :span="21" style="border-left: 1px solid #ebeef5;">
+              <RealTimeLineChartsV2 :data.sync="chartsCurrentData3"
+                                    :increase-data.sync="increaseCurrentData3"
+                                    v-loading="dataLoading"></RealTimeLineChartsV2>
+            </el-col>
+          </el-row>
+        </el-card>
+
+      </el-col>
+    </el-row>
+  </el-col>
+</el-row>

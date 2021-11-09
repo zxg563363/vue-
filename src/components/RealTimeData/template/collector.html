@@ -1,0 +1,12 @@
+<el-form :inline="true" :model="collectorData" v-loading="dataLoading" label-suffix="：" label-width="120px">
+  <el-form-item label="终端编号">{{collectorData.collectorCode}}</el-form-item>
+  <el-form-item label="终端名称">{{collectorData.collectorName}}</el-form-item>
+  <el-form-item label="模型编码">{{collectorData.externalTypeCode}}</el-form-item>
+  <el-form-item label="数据模型">{{collectorData.externalTypeName}}</el-form-item>
+  <el-form-item label="所属空间">{{collectorData.spaceName}}</el-form-item>
+  <el-form-item label="关联设备">{{collectorData.equipmentName}}</el-form-item>
+  <el-form-item label="所属网关">{{collectorData.transmit.transmitName}}</el-form-item>
+  <el-form-item label="网关编号">{{collectorData.transmit.transmitCode}}</el-form-item>
+  <el-form-item label="创建时间">{{collectorData.createTime}}</el-form-item>
+</el-form>
+

@@ -1,0 +1,134 @@
+.workadd{
+	.addType{
+		background:#fff;
+		border-radius:10px;
+		.title{
+		  display: flex;
+		  flex-direction: row;
+		  align-content: center;
+		  font-size: 16px;
+		  padding: 10px 15px ;
+		  color:#1167fa;
+		  font-weight: 600;
+		  font-size: 18px;
+		  border-bottom:1px solid #ebeef5;
+		  &>div:first-child{
+			width: 5px;
+			height: 26px;
+			background: #00CD00;
+			margin-right: 10px;
+		  }
+		  &>div:nth-child(3){
+			margin-left:auto;
+			.el-button{
+			  height: 30px;
+			  padding:5px;
+			}
+		  }
+		}
+		.detail{
+      min-width:1000px;
+      div{
+        .header{
+          height: 40px;
+          background: #eee;
+          font-weight: 600;
+          line-height: 40px;
+          padding-left: 10px;
+        }
+        .content{
+          text-align:center;
+          &>div{
+            margin: 10px 0;
+          }
+          span{
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+          }
+          /deep/.el-input{
+           padding-bottom: 10px;
+           width: 800px;
+           height: 39px;
+            vertical-align:middle;
+          }
+          .el-select{
+            width: 800px;
+             vertical-align:middle;
+          }
+          /deep/.el-form{
+            display: inline-block;
+            vertical-align:middle;
+            // width: 800px;
+          }
+          .el-tree{
+            border-radius: 5px;
+            vertical-align:middle;
+          }
+          .objectTree {
+            margin-left:px;
+            position: absolute;
+            overflow: auto;
+            height: 200px;
+            border: 1px solid #ddd;
+            line-height: normal;
+            z-index: 204;
+           }
+           .width-220{
+              width: 800px;
+            }
+        }
+        .main{
+          padding-top: 25px;
+          justify-content: center;
+          display:flex;
+          padding-left:50px;
+          /deep/.el-form-item__label{
+            color:#000 ;
+            font-size: 16px;
+          }
+          /deep/ .el-input__inner{
+            width: 800px;
+            height: 40px;
+            vertical-align:middle;
+          }
+          /deep/.el-textarea__inner{
+            width: 800px;
+            height: 60px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+.upload {
+    li{
+      height: 100px;
+      width:100px;
+      image{
+        height: 100%;
+        width: 100%;
+      }
+      display: inline-block;
+    }
+
+	.x{
+		font-size: 20px;
+		line-height: 23px;
+		color: white;
+		border-radius: 50%;
+		opacity: 0.8;
+		}
+    }
+}
+
+.widget-main{
+  padding: 12px 12px 0 12px;
+}
+.widget-box{
+  box-shadow: none;
+}
+.el-divider--horizontal{
+  margin: 10px 0;
+  background-color: #ebeef5;
+}

@@ -1,0 +1,89 @@
+.process{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  #workflow-tree{
+    height: calc(100vh - 165px);
+    overflow-y: auto;
+  }
+  .processList{
+    text-indent: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    cursor: pointer;
+    .el-button{
+      float: right;
+      margin: 3px 10px 0 0;
+      display: none;
+    }
+  }
+  .processList:hover{
+    color: #1167fa;
+    background: rgba(0, 0, 0, 0.08);
+    .el-button{
+      display: block;
+    }
+  }
+  .processListActive{
+    color: #1167fa;
+    background: rgba(0, 0, 0, 0.08);
+    .el-button{
+      display: block;
+    }
+  }
+    .messageTitle{
+        height: 40px;
+        line-height: 40px;
+        background: #1167fa;
+        color: #fff;
+        text-indent: 20px;
+    }
+    .title{
+        height: 40px;
+        line-height: 40px;
+        color: #1167fa;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .realName{
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        padding: 0 14px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        margin-right: 10px;
+    }
+  .workflow-form{
+    width: 650px;
+    margin: 0 auto;
+  }
+  .el-divider--horizontal{
+    margin: 12px 0;
+    background-color: #dcdfe6;
+  }
+
+  .approval-user-list{
+    .el-tag--medium{
+      margin-top: 12px;
+      margin-right: 12px;
+    }
+  }
+
+}
+.widget-main{
+  padding: 12px;
+}
+.handle-delete{
+  display: none;
+  position: absolute;
+  right: -10px;
+  top:10px;
+}
+/deep/.el-button--mini.is-circle{
+  padding: 5px;
+}
+/deep/.el-card:hover .handle-delete{
+  display: block;
+}
